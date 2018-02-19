@@ -14,12 +14,10 @@ class Node(object):
         self.isroot=isroot
         
     def set_lchild(self,lchild):
-        
         if self.lchild==None:
             self.lchild=lchild
         
     def set_rchild(self,rchild):
-        
         if self.rchild==None:
             self.rchild=rchild
     
@@ -85,10 +83,8 @@ class Tree(object):
             return None
         
         if root:
-            
             q.append(root)
             q.append(None)
-            
             
             while q:
                 current = q.popleft()
