@@ -2,7 +2,7 @@
 """
 @author: Waleed
 
-Calculate best time to sell and buy stocks with a tranaction fee with every transaction.
+Calculate best time to sell and buy stocks with a transaction fee with every transaction.
 """
 
 profit = 0
