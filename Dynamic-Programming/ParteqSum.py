@@ -1,7 +1,7 @@
 """
 @author: Waleed
 
-Check wether a given array can be partitions into two arrays of equal sums.
+Check wether a given array can be partitioned into two arrays of equal sums.
 """
 
 arr = [1,2,3,4,5,6,7]
