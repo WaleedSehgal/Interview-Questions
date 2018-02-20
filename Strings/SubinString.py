@@ -9,6 +9,8 @@ ss = 'the sub'
 
 ssl = len(ss)
 
+found  = False
+
 for i,c in enumerate(s):
     
     if c == ss[0]:
@@ -16,3 +18,6 @@ for i,c in enumerate(s):
         if sub==ss:
             print(i)
             break
+if found!=True:
+           print('substring not in string')
+
