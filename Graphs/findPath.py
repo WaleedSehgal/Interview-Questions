@@ -2,7 +2,7 @@
 """
 @author: Waleed
 
-returns a path if their exists one from the given start node to the end node.
+returns a path in a graph, if their exists one from the given start node to the end node.
 """
 
 graph = {'a':['b'],
