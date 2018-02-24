@@ -20,9 +20,7 @@ class Node(object):
         self.next_node = new_next
     
     def __str__(self):
-        return self.get_data()
-        
-        
+        return self.get_data()                
 
 class LinkedList(object):
     def __init__(self,head=None):
@@ -38,8 +36,7 @@ class LinkedList(object):
         a,b,c = 0,0,0
         
         sl = LinkedList()
-        
-        
+                
         while l1!=None or l2!=None:
             
             if l1==None:
@@ -60,8 +57,7 @@ class LinkedList(object):
                 Sum = Sum%10
             else:
                 c=0
-            
-            
+                        
             sl.insert(Sum)
             
             if l1!=None:
@@ -84,8 +80,6 @@ class LinkedList(object):
             print(current.get_data(), end='')
             current = current.get_next()
 
-
-
 l1 = LinkedList()
 l2 = LinkedList()
 
@@ -97,9 +91,6 @@ l2.insert(1)
 l2.insert(0)
 l2.insert(1)
 
-
 ll = LinkedList()
-
 sl = ll.addTwo(l1.head,l2.head)
-
 sl.show()
