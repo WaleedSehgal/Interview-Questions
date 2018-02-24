@@ -33,8 +33,7 @@ class LinkedList(object):
     
     def addTwo(self, l1, l2):
         
-        a,b,c = 0,0,0
-        
+        a,b,c = 0,0,0        
         sl = LinkedList()
                 
         while l1!=None or l2!=None:
@@ -48,10 +47,8 @@ class LinkedList(object):
                 b=0
             else:
                 b = l2.data
-            
-            Sum = a+b+c
-            
-            
+                
+            Sum = a+b+c                        
             if Sum>=10:
                 c = 1
                 Sum = Sum%10
@@ -61,14 +58,13 @@ class LinkedList(object):
             sl.insert(Sum)
             
             if l1!=None:
-                l1 = l1.next_node
-            
+                l1 = l1.next_node          
             if l2!=None:
                 l2 = l2.next_node
-        
+                
         if c>0:
             sl.insert(c)
-        
+            
         return sl
             
     def show(self):
