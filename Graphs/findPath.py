@@ -19,7 +19,8 @@ def findpath(graph, start, end, path=[]):
         return path
     
     if start not in graph.keys():
-        return 'start node not in graph'
+        path.pop() 
+        return 
     
     for node in graph[start]:
         
