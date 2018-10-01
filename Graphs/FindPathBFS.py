@@ -5,43 +5,32 @@
 Find a path from given start node to end node in a graph using BFS technique.
 """
 from collections import deque
-
-graph = {'a':['b'],
-         'b':['c','d'],
-         'c':['d'],
-         'd':['e'],
-         'e':['f']
-         }
          
-def bfs(graph, start, end):
+graph = { 'a': ['b','c'],
+          'b': ['f'],
+          'c': ['d'],
+          'd': ['e'],
+          'e': [],
+          'f': []
+        }
+
+def graphPathBFS(graph, start, end):
     
-    #maintain a list of already visited nodes 
-    visited = []
+    todo = [(start, [start])]
     
-    
-    queue = deque()
-    queue.appendleft([start])
-    
-    while queue:
+    while len(todo):
         
-        #use last element from path in queue to explore nodes
-        pathIn = queue.popleft()
-        node = pathIn[-1]
-        
-        #only explore connections for nodes that hasnt been visited yet
-        if node not in visited:
-            connections = graph[node]
+        node, path = todo.pop(0)
+        print(node)
+        for n in graph[node]:
             
-            #check each connection node of the current node
-            for connection in connections:
-                path = list(pathIn)
-                path.extend(connection)
-                queue.append(path)
-                
-                if connection==end:
-                    return path
+            if n in path:
+                continue
             
-            visited.append(node)
+            elif n==end:
+                return path+[n]
             
+            else:
+                todo.append((n, path+[n]))
     
-print(bfs(graph,'a','f'))
+print(graphPathBFS(graph, 'a', 'e'))
